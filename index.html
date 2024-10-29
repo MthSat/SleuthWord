@@ -9,35 +9,45 @@
 <body>
     <div id="counter"> 
         <div>
-            <button id="yes" class="try-button">
-                SIM
+            <input type="password" placeholder="Digite aqui" id="secretword">
+        </div>
+        <div>
+
+            <div>
+
+                <button id="yes" class="button buttonyes">
+                    SIM
+                    <span id="value-yes" class="value">
+                        0
+                    </span>
+                </button>
+                
+                <button id="no" class="button buttonno">
+                    NÃO
+                    <span id="value-no" class="value">
+                        0
+                    </span>
+                </button>
+                
+                <button id="maybe" class="button buttonmaybe">
+                    TALVEZ
+                    <span id="value-maybe" class="value">
+                        0
+                    </span>
+                </button>
+                            
+            </div>
+
+            <button id="correct" class="button buttoncorrect"> 
+                ACERTOU!
             </button>
-            <span id="value-yes" class="value">
-                0
-            </span>
-            <button id="no" class="try-button">
-                NÃO
-            </button>
-            <span id="value-no" class="value">
-                0
-            </span>
-            <button id="maybe" class="try-button">
-                TALVEZ
-            </button>
-            <span id="value-maybe" class="value">
-                0
-            </span>
-            <button id="abort" class="try-button">
-                DESISTIR
-            </button>
+
         </div>
 
-        <button id="correct">
-            ACERTOU!
-        </button>
-        <div>
-            
-        </div>
+        <button id="abort" class="button buttonabort">
+            DESISTIR
+        </button>       
+
     </div>         
     <script src="src/javascritp/script.js"></script>
 </body>

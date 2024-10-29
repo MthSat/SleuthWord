@@ -5,6 +5,9 @@ const noValue = document.getElementById('value-no');
 const maybeButton = document.getElementById('maybe');
 const maybeValue = document.getElementById('value-maybe');
 const abortButton = document.getElementById('abort');
+const correctButton = document.getElementById('correct');
+var secretword = document.getElementById('secretword');
+
 
 let countyes = 0;
 let countno = 0;
@@ -44,5 +47,10 @@ abortButton.addEventListener('click',()=> {
     updatemaybeValue();
     updatenoValue();
     updateyesValue();
+    secretword.type = "password";
+    secretword.value = ""; 
 });
 
+correctButton.addEventListener('click',()=>{
+    secretword.type = "text";
+});
