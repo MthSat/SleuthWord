@@ -53,6 +53,7 @@ correctButton.addEventListener('click',()=>{
 });
 
 abortButton.addEventListener('click',()=> {
+    confirm ("Certeza que deseja desistir?");
     secretword.type = "text";
     secretword.disabled = 1;
     yesButton.disabled = 1;
