@@ -53,15 +53,17 @@ correctButton.addEventListener('click',()=>{
 });
 
 abortButton.addEventListener('click',()=> {
-    confirm ("Certeza que deseja desistir?");
-    secretword.type = "text";
-    secretword.disabled = 1;
-    yesButton.disabled = 1;
-    noButton.disabled = 1;
-    maybeButton.disabled = 1;
-    correctButton.disabled = 1;
-    abortButton.disabled = 1;
-    ShowResult("DESISTIU",secretword.value,countyes,countno,countmaybe);
+    let textconfirmation = "Certeza que deseja desistir?";
+    if (confirm(textconfirmation)==true){
+        secretword.type = "text";
+        secretword.disabled = 1;
+        yesButton.disabled = 1;
+        noButton.disabled = 1;
+        maybeButton.disabled = 1;
+        correctButton.disabled = 1;
+        abortButton.disabled = 1;
+        ShowResult("DESISTIU",secretword.value,countyes,countno,countmaybe);
+    }else{}
 });
 
 restartButton.addEventListener('click',()=> {
