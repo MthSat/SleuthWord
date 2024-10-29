@@ -7,10 +7,17 @@
     <title>SleuthWord</title>
 </head>
 <body>
+
+    <h1>SleuthWord - Adivinhe o que estou pensando!</h1>
+    <p>Pense em um palavra, pode ser uma comida, um objeto, qualquer coisa! </p>
+    <p><strong>Como jogar: </strong>O seu oponente irá fazer perguntas a fim de descobrir qual é a palavra secreta, vá pontuando as tentativas abaixo.</p>
+
     <div id="counter"> 
+        
         <div>
             <input type="password" placeholder="Digite aqui" id="secretword">
         </div>
+
         <div>
 
             <div>
@@ -39,16 +46,27 @@
             </div>
 
             <button id="correct" class="button buttoncorrect"> 
-                ACERTOU!
+                ACERTOU
             </button>
+
+            <button id="abort" class="button buttonabort">
+                DESISTIR
+            </button>  
 
         </div>
 
-        <button id="abort" class="button buttonabort">
-            DESISTIR
-        </button>       
+        <button id="restart" class="button buttonrestart">
+            RECOMEÇAR
+        </button>             
 
-    </div>         
+    </div> 
+    
+    <p>
+        Resultados:
+        <p id="result"></p>
+        
+    </p>  
+
     <script src="src/javascritp/script.js"></script>
 </body>
 </html>

@@ -2,21 +2,8 @@
 
 *{
   font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 1;
+  padding: 1;
   box-sizing: border-box;
 }
 
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #18181b;
-}
-
-#counter{
-  background-color: #262626;
-  padding: 2rem;
-  border-radius: 8px;
-}
