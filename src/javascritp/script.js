@@ -85,11 +85,12 @@ restartButton.addEventListener('click',()=> {
 
 
 function ShowResult(text0,text1,text2,text3,text4) {
-    document.getElementById("result").innerHTML +=
+    var oldResult = document.getElementById("result").innerHTML;
+    document.getElementById("result").innerHTML =
      text0+ "<br>" 
      +"- Palavra: " +"<strong>"+ text1 +"</strong>"+ "<br>"
      +"- SIM: " +"<strong>"+ text2 +"</strong>"+ "<br>"
      +"- NÃO: " +"<strong>"+ text3 +"</strong>"+ "<br>"
      +"- TALVEZ: " +"<strong>"+ text4 +"</strong>"+ "<br>"
-     +"Tentativas Totais: " + "<strong>"+(text2+text3+text4)+"</strong>"+"<br><br>";
+     +"Tentativas Totais: " + "<strong>"+(text2+text3+text4)+"</strong>"+"<br><br>" + oldResult;
   }

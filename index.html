@@ -12,59 +12,50 @@
     <p>Pense em um palavra, pode ser uma comida, um objeto, qualquer coisa! </p>
     <p><strong>Como jogar: </strong>O seu oponente irá fazer perguntas a fim de descobrir qual é a palavra secreta, vá pontuando as tentativas abaixo.</p>
 
-    <div id="counter"> 
-        <div>
-            <input type="password" placeholder="Digite aqui" id="secretword">
-        </div>
+    <div class="container" id="counter"> 
         
-        <div>
-
-            <div>
-
-                <button id="yes" class="button buttonyes">
-                    SIM
-                    <span id="value-yes" class="value">
-                        0
-                    </span>
-                </button>
-                
-                <button id="no" class="button buttonno">
-                    NÃO
-                    <span id="value-no" class="value">
-                        0
-                    </span>
-                </button>
-                
-                <button id="maybe" class="button buttonmaybe">
-                    TALVEZ
-                    <span id="value-maybe" class="value">
-                        0
-                    </span>
-                </button>
-                            
-            </div>
-
-            <button id="correct" class="button buttoncorrect"> 
-                ACERTOU
+            <input class="button word" type="password" placeholder="Digite aqui" id="secretword">    
+            
+            <button id="yes" class="button buttonyes">
+                SIM
+                <span id="value-yes" class="value">
+                    0
+                </span>
             </button>
 
-            <button id="abort" class="button buttonabort">
-                DESISTIR
-            </button>  
+            <button id="maybe" class="button buttonmaybe">
+                TALVEZ
+                <span id="value-maybe" class="value">
+                    0
+                </span>
+            </button> 
 
-        </div>
+            <button id="no" class="button buttonno">
+                NÃO
+                <span id="value-no" class="value">
+                    0
+                </span>
+            </button>       
+                                 
+        <button id="correct" class="button buttoncorrect"> 
+            ACERTOU
+        </button>
 
+        <button id="abort" class="button buttonabort">
+            DESISTIR
+        </button>  
+       
         <button id="restart" class="button buttonrestart">
             RECOMEÇAR
         </button>             
 
     </div> 
     
-    <p>
-        Resultados:
+    <div>
+        <strong>Resultados:</strong>        
         <p id="result"></p>
         
-    </p>  
+    </div>  
 
     <script src="src/javascritp/script.js"></script>
 </body>
