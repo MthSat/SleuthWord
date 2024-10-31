@@ -32,10 +32,10 @@ div{
   border: none;
   font-size: 15px;
   cursor: pointer;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
   font-weight: bold;
-  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24); 
-
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  color: #020617;
 }
 
 .button:disabled{
@@ -57,7 +57,7 @@ div{
   height: 50px;
   border-radius: 20px;
   font-size: 15px;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
   border: 2px solid #020617;
   font-weight: bold; 
   background-color: #1e293b;
@@ -84,7 +84,7 @@ div{
 }
 
 .buttonmaybe{
-  flex-basis: 30%;
+  flex-basis: 35%;
   background-color: #73ceff;
 }
 
@@ -136,7 +136,7 @@ div{
 }
 
 #text-result-abort{
-  width: 150px;
+  width: 135px;
   flex-grow: 1;
   text-align: center;
   background-color: #ff00002f;
@@ -144,17 +144,17 @@ div{
   border-radius: 10px;
   border: 1px solid black;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
 }
 
 #text-result-correct{
-  width: 150px;
+  width: 135px;
   text-align: center;
   background-color: #1abe156c;
   color: #d1d5db;
   border-radius: 10px;
   border: 1px solid black;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
   flex-grow: 1;
 }
