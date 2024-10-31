@@ -12,6 +12,7 @@ const secretword = document.getElementById('secretword');
 let countyes = 0;
 let countno = 0;
 let countmaybe = 0;
+var i = 1;
 
 const updateyesValue = () => {
     yesValue.innerHTML = countyes;
@@ -47,7 +48,8 @@ correctButton.addEventListener('click',()=>{
     noButton.disabled = 1; 
     maybeButton.disabled = 1; 
     correctButton.disabled = 1; 
-    abortButton.disabled = 1; 
+    abortButton.disabled = 1;
+    restartButton.style.backgroundColor = "#65a30d";
     ShowResult("ACERTOU",secretword.value,countyes,countno,countmaybe); //Insere o resumo do resultado
     
 });
@@ -62,6 +64,7 @@ abortButton.addEventListener('click',()=> {
         maybeButton.disabled = 1;
         correctButton.disabled = 1;
         abortButton.disabled = 1;
+        restartButton.style.backgroundColor = "#65a30d";
         ShowResult("DESISTIU",secretword.value,countyes,countno,countmaybe);
     }else{}
 });
@@ -81,16 +84,37 @@ restartButton.addEventListener('click',()=> {
     maybeButton.disabled = 0;
     correctButton.disabled = 0;
     abortButton.disabled = 0;
+    restartButton.style.backgroundColor = "#475569";
 });
 
 
-function ShowResult(text0,text1,text2,text3,text4) {
+    /*function ShowResult(text0,text1,text2,text3,text4) {
     var oldResult = document.getElementById("result").innerHTML;
     document.getElementById("result").innerHTML =
-     text0+ "<br>" 
-     +"- Palavra: " +"<strong>"+ text1 +"</strong>"+ "<br>"
-     +"- SIM: " +"<strong>"+ text2 +"</strong>"+ "<br>"
-     +"- NÃO: " +"<strong>"+ text3 +"</strong>"+ "<br>"
-     +"- TALVEZ: " +"<strong>"+ text4 +"</strong>"+ "<br>"
-     +"Tentativas Totais: " + "<strong>"+(text2+text3+text4)+"</strong>"+"<br><br>" + oldResult;
-  }
+        text0 + "<br>" 
+        +"- Palavra: " +"<strong>"+ text1 +"</strong>"+ "<br>"
+        +"- SIM: " +"<strong>"+ text2 +"</strong>"+ "<br>"
+        +"- NÃO: " +"<strong>"+ text3 +"</strong>"+ "<br>"
+        +"- TALVEZ: " +"<strong>"+ text4 +"</strong>"+ "<br>"
+        +"Tentativas Totais: " + "<strong>"+(text2+text3+text4)+"</strong>"+"<br>" + oldResult;
+  }*/
+
+function ShowResult(text0,text1,text2,text3,text4) {
+    
+    var status = "text-result-abort";
+    text1=text1.toUpperCase();
+
+    if (text0==="ACERTOU"){
+        status="text-result-correct";        
+    }
+    document.getElementById("result").innerHTML +=
+        "<div id="+status+">"+"<strong>"+
+            text0 +" # "+ i + "</strong>" + "<br>" 
+            +"- Palavra: " +"<strong>"+ text1 +"</strong>"+ "<br>"
+            +"- SIM: " +"<strong>"+ text2 +"</strong>"+ "<br>"
+            +"- NÃO: " +"<strong>"+ text3 +"</strong>"+ "<br>"
+            +"- TALVEZ: " +"<strong>"+ text4 +"</strong>"+ "<br>"
+            +"Total: " + "<strong>"+(text2+text3+text4)+"</strong>"+"<br>"
+        +"</div>";
+    i++;
+}
